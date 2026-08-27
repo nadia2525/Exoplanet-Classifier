@@ -63,4 +63,4 @@ you physically about how false positives differ from real planets.)*
 
 ## Live demo
 
-*(Add your Streamlit Community Cloud link here once deployed)*
+[Try the live app here](https://exoplanet-classifier-zleqffftafd8prv7lsfeng.streamlit.app)
