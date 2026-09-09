@@ -57,9 +57,28 @@ streamlit run app.py
 
 ## Results
 
-*(Fill this in once you've run the pipeline — e.g. best model, accuracy/
-ROC-AUC, top 3 predictive features, and 2-3 sentences on what that tells
-you physically about how false positives differ from real planets.)*
+Two machine learning models were evaluated for classifying Kepler objects as **Confirmed exoplanets** or False Positives.
+
+### Logistic Regression
+
+The Logistic Regression model achieved an overall accuracy of 81% and a ROC-AUC score of 0.881. It performed reasonably well as a baseline model, with an F1-score of **0.76** for confirmed exoplanets.
+
+### Random Forest
+
+The Random Forest model achieved the best overall performance, with an accuracy of 91% and a ROC-AUC score of 0.971. It achieved an F1-score of 0.88 when identifying confirmed exoplanets, outperforming the Logistic Regression model.
+
+### Feature Importance
+
+The Random Forest model identified the following features as particularly important for classification:
+
+1. Planetary radius (`koi_prad`) — 0.225
+2. Transit signal-to-noise ratio (`koi_model_snr`) — 0.167
+3. Orbital period (`koi_period`) — 0.108
+4. Transit duration (`koi_duration`) — 0.101
+5. Transit depth (`koi_depth`) — 0.092
+
+Overall, the results indicate that the Random Forest model is substantially more effective than Logistic Regression for this classification task. The importance of features related to planetary characteristics and transit signals suggests that these measurements play a significant role in distinguishing confirmed exoplanets from false positives.
+
 
 ## Live demo
 
