@@ -10,7 +10,7 @@ Kepler found thousands of "candidates," but not everything that looks like
 a planet transit actually is one (eclipsing binaries, instrumental noise,
 and other stars in the same pixel can mimic a transit signal). This project
 builds a model to separate real planets from false positives, and asks:
-**which physical properties are most predictive of a real planet?**
+which physical properties are most predictive of a real planet?
 
 ## Data source
 
@@ -19,7 +19,7 @@ NASA Exoplanet Archive — Kepler Objects of Interest (Cumulative table).
 Direct CSV download (no login needed):
 https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+*+from+cumulative&format=csv
 
-Save it to `data/cumulative.csv`.
+Saved it to `data/cumulative.csv`.
 
 Key columns you'll use:
 - `koi_disposition` — target label (CONFIRMED / FALSE POSITIVE / CANDIDATE)
@@ -57,11 +57,11 @@ streamlit run app.py
 
 ## Results
 
-Two machine learning models were evaluated for classifying Kepler objects as **Confirmed exoplanets** or False Positives.
+Two machine learning models were evaluated for classifying Kepler objects as **Confirmed exoplanets** or false positives.
 
 ### Logistic Regression
 
-The Logistic Regression model achieved an overall accuracy of 81% and a ROC-AUC score of 0.881. It performed reasonably well as a baseline model, with an F1-score of **0.76** for confirmed exoplanets.
+The Logistic Regression model achieved an overall accuracy of 81% and a ROC-AUC score of 0.881. It performed reasonably well as a baseline model, with an F1-score of 0.76 for confirmed exoplanets.
 
 ### Random Forest
 
